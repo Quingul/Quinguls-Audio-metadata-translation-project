@@ -43,3 +43,5 @@ Contributions are welcome! If you encounter any issues or have suggestions for i
 
 
 The google-cloud-translation api does require billing to be setup on your account and while there are other free open source api's due to certain issues this was the most efficient way i could think of to make this work. Im open to suggestions and be sure to reach out with any questions and i will do my best to answer them if i see the question.
+
+There are going to be a good amount of errors but i found that it managed to translate most of my 4000+ files correctly 
