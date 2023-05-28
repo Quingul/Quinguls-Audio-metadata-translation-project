@@ -1,45 +1,40 @@
-# Audio Metadata Translation
+Audio Metadata Translation
+This code is designed to translate the metadata (e.g., title, album, artist) of audio files in a specified directory from Japanese to English using the Google Cloud Translation API. It supports MP3 and FLAC audio file formats.
 
-This project provides a script for translating audio metadata using the Google Cloud Translation API. It allows you to translate the title, album, and artist metadata of audio files from Japanese to English.
+Prerequisites
+Before running the code, make sure you have the following prerequisites:
 
-## Prerequisites
+Python 3 installed on your system.
+Access to the Google Cloud Translation API. You will need to set up a project in the Google Cloud Console and enable the Translation API. Obtain the JSON key file for your service account, which will be used for authentication.
+Setup
+Clone the repository or download the code files to your local machine.
 
-Before using this script, make sure you have the following:
+Install the required Python dependencies using the following command:
 
-- Python 3.x installed on your system.
-- Access to the Google Cloud Translation API. You can obtain the API credentials and enable the Translation API in the Google Cloud Console. [Link to the Google Cloud Translation API documentation](https://cloud.google.com/translate/docs/getting-started)
-- Audio files in either MP3 or FLAC format with Japanese metadata.
+Copy code
+pip install google-cloud-translate mutagen
+Open the code file and update the following variables:
 
-## Installation
+GOOGLE_APPLICATION_CREDENTIALS: Set the path to your JSON key file obtained from the Google Cloud Console.
 
-1. Clone or download this repository to your local machine.
+directory_path: Specify the path to the directory containing the audio files you want to translate.
 
-2. Install the required Python dependencies by running the following command:
+Usage
+To run the code and translate the audio metadata, follow these steps:
 
+Open a terminal or command prompt and navigate to the directory where the code files are located.
 
-3. Set up the Google Cloud credentials by exporting the path to your service account key JSON file:
+Run the following command:
 
+Copy code
+python translation.py
+The code will process the audio files in the specified directory and translate the metadata from Japanese to English using the Google Cloud Translation API.
 
-## Usage
+The original and translated metadata will be printed for each audio file processed.
 
-1. Provide the directory path containing the audio files you want to translate by modifying the `directory_path` variable in the `translation.py` file.
+Once all the files are processed, the total number of successful translations will be displayed.
 
-2. Open a terminal or command prompt and navigate to the project directory.
-
-3. Run the script by executing the following command:
-
-
-The script will start processing the audio files, translating the Japanese metadata to English using the Google Cloud Translation API. It will update the metadata of the audio files if the translation is successful.
-
-4. After the script finishes, check the terminal output for the number of successful translations and any errors encountered during the process.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Contributing
-
-Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request.
+Note: It's recommended to test the code on a small subset of audio files before running it on a large collection to ensure it works as expected.
 
 
 The google-cloud-translation api does require billing to be setup on your account and while there are other free open source api's due to certain issues this was the most efficient way i could think of to make this work. Im open to suggestions and be sure to reach out with any questions and i will do my best to answer them if i see the question.
